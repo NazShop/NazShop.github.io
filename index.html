@@ -25,7 +25,6 @@
       position: relative;
     }
 
-    /* ذرات پس‌زمینه */
     .bg-particles {
       position: fixed;
       inset: 0;
@@ -61,7 +60,6 @@
       100% { transform: translateY(-1100px) rotate(360deg); opacity: 0; }
     }
 
-    /* منوی ناوبری */
     .nav {
       position: fixed;
       top: 0;
@@ -108,7 +106,6 @@
       box-shadow: 0 0 35px rgba(255, 20, 147, 0.4);
     }
 
-    /* صفحات */
     .page {
       display: none;
       padding: 110px 1.5rem 3rem;
@@ -131,7 +128,6 @@
       100% { opacity: 1; transform: translateY(0); }
     }
 
-    /* صفحه اصلی */
     .home-container {
       width: 100%;
       max-width: 600px;
@@ -167,7 +163,6 @@
       text-shadow: 0 0 60px rgba(255, 20, 147, 0.7);
     }
 
-    /* جستجو */
     .search-box {
       width: 100%;
       margin: 1rem 0 0.5rem;
@@ -210,7 +205,6 @@
 
     .search-box button:active { transform: scale(0.95); }
 
-    /* دکمه بازگشت */
     .back-btn {
       position: fixed;
       bottom: 30px;
@@ -236,7 +230,6 @@
     .back-btn:hover { transform: scale(1.05); box-shadow: 0 0 60px #ff1493; }
     .back-btn.show { display: flex; }
 
-    /* اسلایدر تخفیف */
     .offer-section {
       margin: 1.5rem 0;
     }
@@ -294,6 +287,14 @@
       font-size: 2rem;
       border: 2px solid #fff;
       box-shadow: 0 0 30px rgba(255, 105, 180, 0.5);
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .no-img {
@@ -323,7 +324,6 @@
       box-shadow: 0 0 18px #ff69b4;
     }
 
-    /* لیست عمودی تخفیف‌ها (عطرها) در صفحه تخفیف‌ها */
     .offer-list {
       display: flex;
       flex-direction: column;
@@ -366,6 +366,14 @@
       font-size: 2.2rem;
       border: 2px solid #fff;
       box-shadow: 0 0 30px rgba(255, 105, 180, 0.4);
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .offer-list-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .offer-list-info { flex: 1; text-align: right; }
@@ -373,7 +381,6 @@
     .offer-list-brand { color: #ffb6c1; font-size: 0.9rem; margin-top: 2px; }
     .offer-list-price { color: #ff69b4; font-weight: 700; font-size: 1rem; margin-top: 4px; }
 
-    /* لیست محصولات */
     .product-list {
       display: flex;
       flex-direction: column;
@@ -410,13 +417,69 @@
       font-size: 1.8rem;
       border: 2px solid #fff;
       box-shadow: 0 0 25px rgba(255, 105, 180, 0.5);
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .item-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .item-info { flex: 1; }
     .item-name { font-weight: 700; font-size: 1rem; color: #fff; }
     .item-price { color: #ffb6c1; font-weight: 700; font-size: 0.9rem; margin-top: 4px; }
 
-    /* مودال */
+    /* Image Viewer Modal */
+    .image-viewer {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.95);
+      z-index: 300;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      cursor: zoom-out;
+    }
+
+    .image-viewer.show {
+      display: flex;
+    }
+
+    .image-viewer img {
+      max-width: 95%;
+      max-height: 90vh;
+      object-fit: contain;
+      border-radius: 12px;
+      box-shadow: 0 0 60px rgba(255, 20, 147, 0.3);
+      border: 2px solid rgba(255, 105, 180, 0.3);
+    }
+
+    .image-viewer .close-viewer {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: rgba(255, 20, 147, 0.3);
+      border: 2px solid #ff69b4;
+      color: #fff;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      font-size: 1.8rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.3s;
+    }
+
+    .image-viewer .close-viewer:hover {
+      background: rgba(255, 20, 147, 0.6);
+      transform: scale(1.1);
+    }
+
     .modal-overlay {
       display: none;
       position: fixed;
@@ -465,6 +528,14 @@
       font-size: 3rem;
       border: 3px solid #fff;
       box-shadow: 0 0 50px rgba(255, 20, 147, 0.6);
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .modal-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .modal-title { font-size: 1.4rem; font-weight: 900; color: #fff; margin: 15px 0; }
@@ -490,7 +561,6 @@
 
     .rubika-info { margin-top: 16px; color: #ffb6c1; font-size: 0.9rem; background: rgba(0,0,0,0.45); padding: 10px; border-radius: 20px; }
 
-    /* صفحات دیگر */
     .empty-state {
       display: flex;
       flex-direction: column;
@@ -550,7 +620,6 @@
     .rubika-btn:hover { transform: scale(1.05); box-shadow: 0 0 60px #ff1493; }
     .rubika-btn:active { transform: scale(0.95); }
 
-    /* فوتر */
     .footer {
       width: 100%;
       text-align: center;
@@ -598,10 +667,14 @@
     <a href="#about">درباره ما</a>
   </nav>
 
-  <!-- دکمه بازگشت -->
   <button class="back-btn" id="backBtn" title="بازگشت">↩</button>
 
-  <!-- صفحه اصلی -->
+  <!-- Image Viewer -->
+  <div class="image-viewer" id="imageViewer">
+    <button class="close-viewer" id="closeViewer">✕</button>
+    <img id="viewerImage" src="" alt="تصویر محصول">
+  </div>
+
   <section class="page active" id="home">
     <div class="home-container">
       <div class="shop-logo">
@@ -609,23 +682,19 @@
         <span class="shop">SHOP</span>
       </div>
 
-      <!-- جستجو -->
       <div class="search-box">
         <input type="text" id="searchInput" placeholder="🔍 جستجوی محصول ...">
         <button id="searchBtn">جستجو</button>
       </div>
 
-      <!-- اسلایدر تخفیف ویژه (فقط عطرها) -->
       <div class="offer-section">
         <div class="offer-title">🔥 تخفیف ویژه عطرها 🎀</div>
         <div class="slider" id="slider"></div>
       </div>
 
-      <!-- لیست محصولات -->
       <div class="offer-title" style="margin-top: 1.5rem;">🛍️ همه محصولات</div>
       <div class="product-list" id="productList"></div>
 
-      <!-- فوتر -->
       <div class="footer">
         تمامی حقوق این سایت متعلق به فروشگاه اینترنتی نازشاپ میباشد ♡<br>
         <span style="font-size:0.75rem;color:#555;">سایت طراحی شده توسط <a href="https://rubika.ir/APTWAR_ORG" target="_blank">@ApTWaRTeam</a> روبیکا و تلگرام <a href="https://t.me/APTWAR_ORG" target="_blank">APTWAR_ORG</a></span>
@@ -633,7 +702,6 @@
     </div>
   </section>
 
-  <!-- صفحه محصولات ویژه -->
   <section class="page" id="products">
     <div class="empty-state">
       <h2>⭐ محصولات ویژه</h2>
@@ -648,7 +716,6 @@
     </div>
   </section>
 
-  <!-- صفحه تخفیف‌ها (لیست عمودی عطرها) -->
   <section class="page" id="offers">
     <div class="empty-state" style="max-width:600px; width:100%;">
       <h2>🎀 تخفیف‌های ویژه عطرها</h2>
@@ -661,7 +728,6 @@
     </div>
   </section>
 
-  <!-- صفحه پشتیبانی -->
   <section class="page" id="support">
     <div class="empty-state">
       <h2>📞 پشتیبانی</h2>
@@ -675,7 +741,6 @@
     </div>
   </section>
 
-  <!-- صفحه درباره ما -->
   <section class="page" id="about">
     <div class="empty-state">
       <h2>🌸 درباره NazShop</h2>
@@ -698,7 +763,6 @@
     </div>
   </section>
 
-  <!-- مودال جزئیات -->
   <div class="modal-overlay" id="modal">
     <div class="modal-box">
       <button class="modal-close" id="closeModal">✕</button>
@@ -714,30 +778,40 @@
 
   <script>
     (function() {
+      // Product data with image URLs from GitHub
       const products = [
         { id:0, name:'ریمل حجم دهنده سوزنی', brand:'Gege Bear', icon:'🧸', price:'۲۹۰,۰۰۰ تومان', short:'۲۹۰ ت',
+          img:'https://NazShop.github.io/IMG_20260727_103234_074.jpg',
           desc:'✨ هیچ مواد اضافه‌ای روی مژه نمیاره و همین باعث میشه که به هم نچسبن😍<br>👁️ یجوری مژه‌ها رو تاربه‌تار و بلند و پررنگ نشون میده که باید قسم بخوری ریمل زدی تا کسی باور کنه🙈<br>💖 حتی ریزترین مژه‌هاتو یکی یکی حجیم و بلند میکنه.🤗' },
         { id:1, name:'عطر یارا صورتی', brand:'Yara Pink', icon:'💖', price:'۲۴۰,۰۰۰ تومان', short:'۲۴۰ ت',
+          img:'https://NazShop.github.io/IMG_20260727_103229_391.jpg',
           desc:'💖 عطری عجیب غریب و برازنده خانم های باوقار<br>طبع : گرم و شیرین و ملایم<br>گروه بویایی : شرقی وانیلی<br>اسانس اولیه : گل آفتاب پرست، نارنگی، ارکیده<br>اسانس میانی : میوه های استوایی<br>اسانس پایه : مشک ، وانیل ، چوب صندل سفید' },
         { id:2, name:'کرم آبرسان یونیکورن', brand:'Unicorn', icon:'🦄', price:'۱۷۰,۰۰۰ تومان', short:'۱۷۰ ت',
+          img:'https://NazShop.github.io/IMG_20260727_103232_217.jpg',
           desc:'🦄 کرم آبرسان و مرطوب کننده یونیکورن<br>🍒 حاوی عصاره شکوفه گیلاس<br>✨ جذب سریع، مرطوب کننده، آبرسان<br>💧 مناسب پوست دست، بدون چسبندگی<br>🌟 تغذیه کننده، ضدلک، روشن کننده<br>💖 دارای شاین های ریز و درخشان' },
         { id:3, name:'رژگونه جادویی', brand:'Rimocoo', icon:'✨', price:'۲۰۰,۰۰۰ تومان', short:'۲۰۰ ت',
+          img:'https://NazShop.github.io/IMG_20260727_103236_537.jpg',
           desc:'✨ رژگونه جادویی pink is the new black<br>🖤 رنگ مشکی که روی پوست صورتی میشه!<br>💧 بافت نرم و مایع با پخش یکنواخت<br>🎨 پیگمنت بالا و کاور عالی<br>⏰ ماندگاری بالا تا ساعت ها<br>💄 قابل استفاده بعنوان رژلب و سایه چشم' },
         { id:4, name:'ماسک ورقه ای', brand:'صورتی', icon:'🌸', price:'۶۰,۰۰۰ تومان', short:'۶۰ ت',
+          img:'https://NazShop.github.io/Screenshot_20260727_233639_Google.jpg',
           desc:'🌸 ماسک ورقه ای صورت<br>🥥 روشن و آبرسان<br>💧 مغذی پوست<br>❄️ قبل استفاده داخل یخچال بزارین<br>🌸 ارسال رایحه فقط رندوم' },
-        { id:5, name:'کرم دست SADOER', brand:'سادو', icon:'🧴', price:'۲۲۰,۰۰۰ تومان', short:'۲۲۰ ت',
+        { id:5, name:'کرم دست پرتقال', brand:'SADOER', icon:'🧴', price:'۲۲۰,۰۰۰ تومان', short:'۲۲۰ ت',
+          img:'https://NazShop.github.io/IMG_20260727_103240_894.jpg',
           desc:'🌸 کرم دست‌های خوشبو و نرم‌کننده SADOER<br>🥑 آووکادو (سبز): آبرسانی عمیق و ترمیم‌کننده قوی<br>🍊 پرتقال ادویه‌ای (زرد): انرژی و تازگی<br>💧 بافت سبک و جذب سریع، بدون حس چربی<br>حجم: ۱۵۰ گرم' },
         { id:6, name:'لوسیون شکوفه گیلاس', brand:'SADOR', icon:'🍒', price:'۲۵۰,۰۰۰ تومان', short:'۲۵۰ ت',
+          img:'https://NazShop.github.io/IMG_20260727_103243_454.jpg',
           desc:'🌸 لوسیون بدن شکوفه گیلاس سادور<br>💧 مرطوب‌کنندگی عمیق و نرم‌کنندگی<br>🌺 عطر ملایم شکوفه گیلاس، حس آرامش<br>✨ جلوگیری از پیری زودرس با آنتی‌اکسیدان<br>💖 مناسب بعد از استحمام' },
-        { id:7, name:'هایلایتر پودری', brand:'تیک تاک', icon:'✨', price:'۲۰۰,۰۰۰ تومان', short:'۲۰۰ ت',
+        { id:7, name:'هایلایتر پودری تیک تاک', brand:'تیک تاک', icon:'✨', price:'۲۰۰,۰۰۰ تومان', short:'۲۰۰ ت',
+          img:'https://NazShop.github.io/IMG_20260727_103247_842.jpg',
           desc:'⚡️ هایلایتر پودری تیک تاک<br>💥 مثل سیندرلا برق بزن!<br>🧚‍♀ ماندگاری عالی و پخش راحت<br>👸 قابل استفاده روی گونه، بینی، حتی موها' },
         { id:8, name:'پنکیک جادویی', brand:'فیکس', icon:'🪞', price:'۳۶۰,۰۰۰ تومان', short:'۳۶۰ ت',
+          img:'https://NazShop.github.io/IMG_20260727_103249_838.jpg',
           desc:'🪞 پنکیک جادویی فیکس کننده<br>💄 مات و ضدآب، بدون حالت کیکی<br>⏰ ماندگاری بالا، جایگزین پودر فیکس<br>❌ بدون کاور، فقط مات کننده' },
         { id:9, name:'پک هایلایتر ۵تایی', brand:'کالرکاستل باربی', icon:'💖', price:'۲۶۰,۰۰۰ تومان', short:'۲۶۰ ت',
+          img:'https://NazShop.github.io/IMG_20260727_103253_268.jpg',
           desc:'🎀 هایلایتر ۵تایی کالرکاستل باربی اورجینال<br>✨ بافت نرم و ابریشمی با پیگمنت بالا<br>🌈 دارای شاین طلایی و صورتی ملایم<br>💎 مناسب انواع تناژ پوستی<br>💖 ماندگاری طولانی و درخشش فوق‌العاده' }
       ];
 
-      // عطرها: فعلاً فقط عطر یارا صورتی (id:1)
       const perfumeIds = [1];
 
       const slider = document.getElementById('slider');
@@ -746,17 +820,52 @@
       const searchInput = document.getElementById('searchInput');
       const searchBtn = document.getElementById('searchBtn');
 
-      // ساخت اسلایدر با عطرها
+      // Image viewer functions
+      const imageViewer = document.getElementById('imageViewer');
+      const viewerImage = document.getElementById('viewerImage');
+      const closeViewer = document.getElementById('closeViewer');
+
+      function showImage(src) {
+        if (src) {
+          viewerImage.src = src;
+          imageViewer.classList.add('show');
+        }
+      }
+
+      closeViewer.addEventListener('click', () => imageViewer.classList.remove('show'));
+      imageViewer.addEventListener('click', (e) => {
+        if (e.target === imageViewer) imageViewer.classList.remove('show');
+      });
+
+      // Helper to create image element
+      function createImageElement(src, alt, className) {
+        const wrapper = document.createElement('div');
+        wrapper.className = className;
+        if (src) {
+          const img = document.createElement('img');
+          img.src = src;
+          img.alt = alt;
+          img.loading = 'lazy';
+          img.addEventListener('click', (e) => {
+            e.stopPropagation();
+            showImage(src);
+          });
+          wrapper.appendChild(img);
+        } else {
+          wrapper.innerHTML = `<span>📷</span><span class="no-img">به‌زودی</span>`;
+        }
+        return wrapper;
+      }
+
+      // Build slider with perfumes
       perfumeIds.forEach(id => {
         const p = products[id];
         if (!p) return;
         const card = document.createElement('div');
         card.className = 'slider-card';
+        const imgWrapper = createImageElement(p.img, p.name, 'card-img');
         card.innerHTML = `
-          <div class="card-img">
-            <span>${p.icon}</span>
-            <span class="no-img">📷 به‌زودی آپلود می‌شود</span>
-          </div>
+          ${imgWrapper.outerHTML}
           <div class="card-name">${p.name}<br><small>${p.brand}</small></div>
           <div class="card-price">${p.short}</div>
         `;
@@ -764,17 +873,15 @@
         slider.appendChild(card);
       });
 
-      // لیست عمودی تخفیف‌ها (عطرها) در صفحه تخفیف‌ها
+      // Build vertical offer list
       perfumeIds.forEach(id => {
         const p = products[id];
         if (!p) return;
         const item = document.createElement('div');
         item.className = 'offer-list-item';
+        const imgWrapper = createImageElement(p.img, p.name, 'offer-list-img');
         item.innerHTML = `
-          <div class="offer-list-img">
-            <span>${p.icon}</span>
-            <span class="no-img" style="font-size:0.5rem;">به‌زودی</span>
-          </div>
+          ${imgWrapper.outerHTML}
           <div class="offer-list-info">
             <div class="offer-list-name">${p.name}</div>
             <div class="offer-list-brand">${p.brand}</div>
@@ -785,7 +892,7 @@
         offerList.appendChild(item);
       });
 
-      // تابع رندر محصولات با فیلتر
+      // Render products with filter
       function renderProducts(filter = '') {
         productList.innerHTML = '';
         const filtered = products.filter(p => 
@@ -801,11 +908,9 @@
           const realId = products.indexOf(p);
           const item = document.createElement('div');
           item.className = 'product-item';
+          const imgWrapper = createImageElement(p.img, p.name, 'item-img');
           item.innerHTML = `
-            <div class="item-img">
-              <span>${p.icon}</span>
-              <span class="no-img" style="font-size:0.5rem;">به‌زودی</span>
-            </div>
+            ${imgWrapper.outerHTML}
             <div class="item-info">
               <div class="item-name">${p.name} ${p.brand}</div>
               <div class="item-price">${p.price}</div>
@@ -816,10 +921,9 @@
         });
       }
 
-      // رندر اولیه
       renderProducts();
 
-      // جستجو
+      // Search
       function doSearch() {
         const val = searchInput.value.trim();
         renderProducts(val);
@@ -833,7 +937,12 @@
       const modal = document.getElementById('modal');
       function openModal(i) {
         const p = products[i];
-        document.getElementById('modalIcon').textContent = p.icon;
+        const modalImg = document.getElementById('modalImg');
+        if (p.img) {
+          modalImg.innerHTML = `<img src="${p.img}" alt="${p.name}" onclick="event.stopPropagation(); showImage('${p.img}')">`;
+        } else {
+          modalImg.innerHTML = `<span>${p.icon}</span><span class="no-img">📷 عکس موجود نیست</span>`;
+        }
         document.getElementById('modalTitle').textContent = p.name + ' ' + p.brand;
         document.getElementById('modalDesc').innerHTML = p.desc;
         document.getElementById('modalPrice').textContent = '💖 ' + p.price;
@@ -843,14 +952,14 @@
       document.getElementById('closeModal').addEventListener('click', () => modal.classList.remove('show'));
       modal.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('show'); });
 
-      // دکمه خرید
+      // Buy button
       document.getElementById('btnBuy').addEventListener('click', () => {
         const w = window.open('', '_blank');
         w.document.write(`<!DOCTYPE html><html dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>NazShop</title><style>@import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css');body{font-family:'Vazirmatn';background:#1a0b1a;color:#fff;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;text-align:center;background:radial-gradient(circle at top,#3d1a3a,#0a000a);}.box{background:rgba(255,255,255,0.1);backdrop-filter:blur(18px);padding:40px 30px;border-radius:50px;border:2px solid #ff69b4;box-shadow:0 0 70px #ff1493, inset 0 0 30px rgba(255,105,180,0.2);max-width:400px;width:100%;}.title{color:#ffb6c1;font-size:1.8rem;margin-bottom:20px;text-shadow:0 0 30px #ff1493;}.id-box{background:rgba(255,20,147,0.2);border:2px solid #ff69b4;padding:18px 20px;border-radius:40px;margin:20px 0;font-size:1.6rem;font-weight:900;color:#fff;box-shadow:0 0 40px #ff1493, inset 0 0 20px rgba(255,105,180,0.3);letter-spacing:2px;}.rubika-btn{display:inline-block;background:linear-gradient(135deg,#ff1493,#ff69b4);color:#fff;padding:16px 40px;border-radius:60px;font-size:1.3rem;font-weight:700;text-decoration:none;margin-top:20px;box-shadow:0 0 50px rgba(255,20,147,0.7);transition:0.3s;border:2px solid #fff;}.rubika-btn:hover{transform:scale(1.05);box-shadow:0 0 80px #ff1493;}.sub{color:rgba(255,255,255,0.5);margin-top:20px;font-size:0.9rem;}</style></head><body><div class="box"><div class="title">✨ سفارش از طریق روبیکا ✨</div><div class="id-box">📱 @Naz_shop_admin</div><a class="rubika-btn" href="https://rubika.ir/joinc/+FDBDEGEF0LFWUWPOCIIWIHVSBNTWZGRQ" target="_blank">🚀 ورود به کانال روبیکا</a><div class="sub">💖 برای خرید و مشاوره پیام دهید</div></div></body></html>`);
         w.document.close();
       });
 
-      // دکمه بازگشت
+      // Navigation
       const backBtn = document.getElementById('backBtn');
       let pageHistory = ['home'];
       let currentPage = 'home';
@@ -869,7 +978,6 @@
         }
       }
 
-      // ناوبری
       const navLinks = document.querySelectorAll('.nav a');
       navLinks.forEach(a => a.addEventListener('click', function(e) {
         e.preventDefault();
@@ -882,7 +990,6 @@
         window.location.hash = id;
       }));
 
-      // دکمه بازگشت
       backBtn.addEventListener('click', () => {
         if (pageHistory.length > 1) {
           pageHistory.pop();
@@ -895,7 +1002,6 @@
         }
       });
 
-      // مدیریت hash
       if (window.location.hash) {
         const id = window.location.hash.replace('#','');
         if (['home','products','offers','support','about'].includes(id)) {
@@ -914,6 +1020,9 @@
           showPage(id);
         }
       });
+
+      // Make showImage globally accessible for onclick in modal
+      window.showImage = showImage;
 
     })();
   </script>
